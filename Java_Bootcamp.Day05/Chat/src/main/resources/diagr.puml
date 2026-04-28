@@ -1,0 +1,39 @@
+@startuml
+
+' Таблицы
+entity "User" as User {
+  * user_id : INT <<PK>>
+  --
+  login : VARCHAR
+  password : VARCHAR
+}
+
+entity "Chatroom" as Chatroom {
+  * chatroom_id : INT <<PK>>
+  --
+  chatroom_name : VARCHAR
+  owner_id : INT <<FK>>
+}
+
+entity "Message" as Message {
+  * message_id : INT <<PK>>
+  --
+  author_id : INT <<FK>>
+  room_id : INT <<FK>>
+  text : TEXT
+  created_at : TIMESTAMP
+}
+
+entity "UserChatroom" as UserChatroom {
+  * user_id : INT <<FK, PK>>
+  * chatroom_id : INT <<FK, PK>>
+}
+
+' Связи
+User ||--o{ Chatroom : "owns"
+Chatroom ||--o{ Message : "contains"
+User ||--o{ Message : "writes"
+User ||--o{ UserChatroom : ""
+Chatroom ||--o{ UserChatroom : ""
+
+@enduml
