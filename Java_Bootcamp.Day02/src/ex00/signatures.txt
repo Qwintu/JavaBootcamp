@@ -1,0 +1,15 @@
+PNG, 89 50 4E 47 0D 0A 1A 0A
+GIF, 47 49 46 38 37 61
+jpg, FF D8 FF
+BMP, 42 4D
+PDF, 25 50 44 46 2D
+doc xls ppt, D0 CF 11 E0 A1 B1 1A E1
+RAR, 52 61 72 21 1A 07 01 00
+zip, 50 4B 03 04
+zip, 50 4B 34
+exe, 4D 5A
+class, CA FE BA BE
+ogg, 4F 67 67 53
+mp3, FF FB
+mp3, FF F3
+mp3, FF F2
